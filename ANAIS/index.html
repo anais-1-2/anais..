@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anaís - Mi Hobby</title>
+<link rel="stylesheet" href="estilos.css">
+<style>
+.mi-imagen, video, audio {
+  margin-top: 15px;
+  display: block;
+  max-width: 90%;
+  border-radius: 15px;
+}
+.volver {
+  display:block;
+  margin-top:15px;
+  cursor:pointer;
+  color:blue;
+}
+</style>
+</head>
+<body>
+
+<!-- INPUTS PARA SECCIONES -->
+<input type="radio" name="tabs" id="inicio" checked>
+<input type="radio" name="tabs" id="biografia">
+<input type="radio" name="tabs" id="metas">
+<input type="radio" name="tabs" id="objetivos">
+<input type="radio" name="tabs" id="motivacion">
+<input type="radio" name="tabs" id="bailar">
+<input type="radio" name="tabs" id="voley">
+<input type="radio" name="tabs" id="musica">
+<input type="radio" name="tabs" id="tiktok">
+<input type="radio" name="tabs" id="facebook">
+<input type="radio" name="tabs" id="instagram">
+
+<!-- MENÚ -->
+<nav>
+  <div class="logo">UN ESPACIO PARA MI</div>
+  <ul class="menu">
+    <li><label for="inicio" class="submenu-label">Inicio</label></li>
+    <li>
+      <label class="submenu-label">Sobre mí ▼</label>
+      <ul class="submenu">
+        <li><label for="biografia" class="submenu-label">Biografía</label></li>
+        <li><label for="metas" class="submenu-label">Mis Metas</label></li>
+        <li><label for="objetivos" class="submenu-label">Objetivos</label></li>
+        <li><label for="motivacion" class="submenu-label">Motivación</label></li>
+      </ul>
+    </li>
+    <li>
+      <label class="submenu-label">Hobbies ▼</label>
+      <ul class="submenu">
+        <li><label for="bailar" class="submenu-label">Bailar</label></li>
+        <li><label for="voley" class="submenu-label">Vóley</label></li>
+        <li><label for="musica" class="submenu-label">Música</label></li>
+      </ul>
+    </li>
+    <li>
+      <label class="submenu-label">Contacto ▼</label>
+      <ul class="submenu">
+        <li><label for="tiktok" class="submenu-label">TikTok</label></li>
+        <li><label for="facebook" class="submenu-label">Facebook</label></li>
+        <li><label for="instagram" class="submenu-label">Instagram</label></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============================ -->
+<!-- SECCIONES -->
+<!-- ============================ -->
+
+<!-- INICIO -->
+<section id="contenido-inicio" class="contenido">
+  <h1>¡Hola! Soy Anaís</h1>
+  <p>Tengo 19 años y esta es mi página para compartir mis hobbies y mi historia. 💖</p>
+
+  <img src="img/A1.webp" class="mi-imagen" alt="Imagen de inicio">
+  
+</section>
+
+<!-- BIOGRAFÍA -->
+<section id="contenido-biografia" class="contenido">
+  <h1>Biografía</h1>
+  <p>Soy Anaís Huamán Yancce, una persona soñadora y perseverante. Me gusta aprender, crecer y buscar siempre lo mejor para mi futuro. Disfruto de los atardeceres, el cielo y el campo bonito, porque me dan paz y motivación para seguir adelante con fe y actitud positiva.</p>
+
+  <img src="img/4.jpg" class="mi-imagen" alt="Imagen Biografía">
+  <video src="video/WhatsApp Video 2025-10-30 at 10.20.14 PM.mp4" controls class="mi-imagen"></video>
+    <video src="video/WhatsApp Video 2025-10-30 at 10.23.09 PM.mp4" controls class="mi-imagen"></video>
+  <audio src="audio/TikVid.io_7498898757489102135.mp3" controls class="mi-imagen"></audio>
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+
+<!-- METAS -->
+<section id="contenido-metas" class="contenido">
+  <h1>Mis Metas</h1>
+  <p>Corto plazo: Terminar mis estudios y fortalecer mis conocimientos en tecnología.
+Mediano plazo: Emprender proyectos digitales propios y seguir capacitándome.
+Largo plazo: Ser una profesional exitosa, independiente e inspiración para los demás.</p>
+
+  <img src="img/grAD.jpg" class="mi-imagen" alt="Imagen Metas">
+  
+  
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+
+<!-- OBJETIVOS -->
+<section id="contenido-objetivos" class="contenido">
+  <h1>Objetivos</h1>
+  <p>Seguir aprendiendo y mejorando mis habilidades.
+
+Convertirme en una profesional creativa y preparada.
+
+Crear proyectos que aporten valor e inspiren a otros.
+
+Crecer personal y espiritualmente con esfuerzo y fe.</p>
+
+  <img src="img/IMG_20241123_132006.jpg" class="mi-imagen" alt="Imagen Objetivos">
+ 
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+
+<!-- MOTIVACIÓN -->
+<section id="contenido-motivacion" class="contenido">
+  <h1>Motivación</h1>
+  <p>Mi motivación es convertirme en una mejor versión de mí cada día. Me inspiran mis sueños, mi familia y la fe en que con esfuerzo y constancia todo es posible. Cada paso, por pequeño que sea, me acerca a la persona que quiero ser. Nunca dejo de aprender, crecer y luchar por mis metas, porque sé que el futuro se construye con dedicación y valentía.</p>
+
+  <img src="img/motvcn.jpg" class="mi-imagen" alt="Imagen Motivación">
+  <video src="video/PinDown.io_@svictorraul9_1761315133.mp4" controls class="mi-imagen"></video>
+  <audio src="audio/gospel-choir-heavenly-transition-3-186880.mp3" controls class="mi-imagen"></audio>
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+
+<!-- HOBBIES -->
+<section id="contenido-bailar" class="contenido">
+  <h1>Bailar</h1>
+  <p>Bailar es una de mis pasiones. Me hace sentir libre, feliz y me ayuda a expresar mis emociones a través del movimiento.</p>
+
+  <img src="img/484559472_998778132190641_3735741247707092068_n.jpg" class="mi-imagen" alt="Imagen Bailar">
+  <video src="video/WhatsApp Video 2025-11-03 at 8.18.57 PM.mp4" controls class="mi-imagen"></video>
+  <audio src="audio/TikVid.io_7441491637408140599.mp3" controls class="mi-imagen"></audio>
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+
+<section id="contenido-voley" class="contenido">
+  <h1>Vóley</h1>
+  <p>El vóley es mi deporte favorito. Me mantiene activa, mejora mi disciplina y me enseña a trabajar en equipo con esfuerzo y actitud positiva.</p>
+
+  <img src="img/338178101_1302696007127478_6117383216552135426_n.jpg" class="mi-imagen" alt="Imagen Vóley">
+  <video src="video/WhatsApp Video 2025-11-03 at 8.03.30 PM.mp4" controls class="mi-imagen"></video>
+  <audio src="audio/TikVid.io_7170877491047894277.mp3" controls class="mi-imagen"></audio>
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+
+<section id="contenido-musica" class="contenido">
+  <h1>Música</h1>
+  <p>Amo escuchar música porque me acompaña en todo momento, me motiva, me relaja y me llena de buena energía.</p>
+
+  <img src="img/WhatsApp Image 2025-11-03 at 8.09.46 PM.jpeg" class="mi-imagen" alt="Imagen Música">
+  <video src="video/WhatsApp Video 2025-11-03 at 8.07.42 PM.mp4" controls class="mi-imagen"></video>
+  <audio src="audio/TikVid.io_7567198671721254165.mp3" controls class="mi-imagen"></audio>
+
+  <label for="inicio" class="volver">← Volver a Inicio</label>
+</section>
+<section id="contenido-tiktok" class="contenido">
+  <a href="https://www.tiktok.com/@anais.h.y?_r=1&_t=ZS-917S2PLJrPE" target="_blank">TikTok</a>
+</section>
+
+<section id="contenido-facebook" class="contenido">
+  <a href="https://www.facebook.com/careliz.huaman.7" target="_blank">Facebook</a>
+</section>
+
+<section id="contenido-instagram" class="contenido">
+  <a href="https://www.instagram.com/careliz.huaman.7" target="_blank">Instagram</a>
+</section>
+
+
+
+</body>
+</html>

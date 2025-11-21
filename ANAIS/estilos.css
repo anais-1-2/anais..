@@ -1,0 +1,237 @@
+/* ============================= */
+/* RESET BÁSICO */
+/* ============================= */
+* { 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+}
+
+/* ============================= */
+/* ESTILO DEL BODY Y FONDO ANIMADO */
+/* ============================= */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #e0f7fa, #f3e5f5, #ffe0f0, #d1c4e9);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;
+}
+
+/* Animación de fondo */
+@keyframes gradientBG {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+/* ============================= */
+/* MENÚ PRINCIPAL */
+/* ============================= */
+nav {
+  background-color:#333;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  position:fixed;
+  top:0;
+  z-index:1000;
+}
+
+nav .logo { 
+  font-size:1.8rem; 
+  color:#ffccff; 
+  font-weight:bold; 
+}
+
+nav .menu { 
+  list-style:none; 
+  display:flex; 
+}
+
+nav .menu li { 
+  position:relative; 
+  margin-left:20px; 
+}
+
+/* Submenú desplegable */
+nav .menu li .submenu { 
+  display:none; 
+  position:absolute; 
+  top:100%; 
+  left:0; 
+  background:#045552; 
+  border-radius:5px; 
+  padding:0; 
+  list-style:none; 
+}
+
+nav .menu li:hover .submenu { 
+  display:block; 
+}
+
+/* Estilo de los labels de submenú */
+.submenu-label {
+  cursor:pointer;
+  color:white;
+  padding:10px 15px;
+  display:block;
+  border-radius:6px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.submenu-label:hover { 
+  background-color:#ff99cc; 
+  color:#333; 
+}
+
+/* ============================= */
+/* SECCIONES PRINCIPALES (CONTENIDO) */
+/* ============================= */
+.contenido { 
+  display: none; /* todas ocultas por defecto */
+  padding: 50px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,182,193,0.9));
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 800px;
+  margin: 150px auto 50px auto; /* centrado horizontal y margen superior */
+  font-size: 1.2rem; 
+  transition: all 0.4s ease;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+/* ============================= */
+/* SECCIÓN ACTIVA (visible) CON ANIMACIÓN */
+/* ============================= */
+input#inicio:checked ~ #contenido-inicio,
+input#biografia:checked ~ #contenido-biografia,
+input#metas:checked ~ #contenido-metas,
+input#objetivos:checked ~ #contenido-objetivos,
+input#motivacion:checked ~ #contenido-motivacion,
+input#bailar:checked ~ #contenido-bailar,
+input#voley:checked ~ #contenido-voley,
+input#musica:checked ~ #contenido-musica,
+input#tiktok:checked ~ #contenido-tiktok,
+input#facebook:checked ~ #contenido-facebook,
+input#instagram:checked ~ #contenido-instagram {
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+/* Animación de aparición */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ============================= */
+/* BOTÓN VOLVER A INICIO */
+/* ============================= */
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(to right, #ff99cc, #ff66b3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.volver:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ============================= */
+/* IMÁGENES EN SECCIONES */
+/* ============================= */
+.mi-imagen {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: block;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.mi-imagen:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media(max-width:768px) {
+  nav { flex-direction:column; align-items:flex-start; padding:15px; }
+  nav .menu { flex-direction:column; width:100%; margin-top:10px; }
+  nav .menu li { margin-left:0; }
+  .contenido { padding-top:180px; padding-left:20px; padding-right:20px; }
+}
+
+
+/* ============================= */
+/* ANIMACIÓN DE SUBMENÚ FLOTANTE */
+/* ============================= */
+nav .menu li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #045552;
+  border-radius: 5px;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Cuando el cursor está sobre el menú principal */
+nav .menu li:hover .submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación de cada item del submenú */
+nav .menu li .submenu li {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Despliegue progresivo de los items */
+nav .menu li:hover .submenu li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Espaciado entre items para efecto más elegante */
+nav .menu li .submenu li + li {
+  margin-top: 5px;
+}
+
+
+nav .menu li:hover .submenu li:nth-child(1) { transition-delay: 0s; }
+nav .menu li:hover .submenu li:nth-child(2) { transition-delay: 0.1s; }
+nav .menu li:hover .submenu li:nth-child(3) { transition-delay: 0.2s; }
+nav .menu li:hover .submenu li:nth-child(4) { transition-delay: 0.3s; }
